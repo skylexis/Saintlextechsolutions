@@ -86,6 +86,14 @@ section {
   background-color: #f9f9f9; /* Optional: light background for separation */
 }
 
+section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
 /* Container for centered content */
 .container {
   max-width: 1200px;
