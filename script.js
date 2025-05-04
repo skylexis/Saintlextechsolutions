@@ -1,7 +1,20 @@
+// Basic form submission (this does not send email, just shows a confirmation)
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#contact-form");
 
-document.querySelectorAll("form").forEach(form => {
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Thank you! We'll be in touch.");
-  });
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = form.querySelector("input[name='name']").value;
+      const email = form.querySelector("input[name='email']").value;
+      const message = form.querySelector("textarea[name='message']").value;
+
+      if (name && email && message) {
+        alert("Thank you for contacting Saint Lex Tech Solutions, " + name + "! We'll get back to you shortly.");
+        form.reset();
+      } else {
+        alert("Please fill in all fields.");
+      }
+    });
+  }
 });
