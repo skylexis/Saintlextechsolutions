@@ -18,3 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+let modalShown = false;
+
+function closeModal() {
+  document.getElementById("newsletter-modal").style.display = "none";
+}
+
+function showModal() {
+  document.getElementById("newsletter-modal").style.display = "flex";
+}
+
+document.addEventListener("mouseleave", function (e) {
+  if (e.clientY < 10 && !modalShown) {
+    showModal();
+    modalShown = true;
+  }
+});
