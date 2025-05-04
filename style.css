@@ -121,3 +121,14 @@ footer {
   background-color: #002b5c;
   color: white;
 }
+<div id="newsletter-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Get the latest updates and insights from Saint Lex Tech Solutions.</p>
+    <form id="newsletter-form">
+      <input type="email" placeholder="Your Email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
